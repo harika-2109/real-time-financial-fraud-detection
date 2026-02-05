@@ -6,7 +6,10 @@ def main():
 
     # Show first few rows
     print("Sample transaction data:")
-    print(df.head())
+    df["high_amount_flag"] = df["amount"] > 1000
+
+    print("Transaction data with high amount flag:")
+    print(df)
 
 if __name__ == "__main__":
     main()
